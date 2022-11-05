@@ -1,2 +1,6 @@
 # hanoi_kernel
-The kernel of the hanoi tower game, made during NSI class
+This repository contains the kernel of the mathematical game "Towers of Hanoi".
+
+This project was made during my last year of high school, in "NSI" class.
+
+UNDER DEVELOPMENT - the graphical interface will be made later
