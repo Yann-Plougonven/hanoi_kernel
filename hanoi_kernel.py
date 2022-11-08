@@ -24,7 +24,7 @@ class Hanoi:
             1 : game over, (src, dest)
             2 : the top plate of the src is larger than the top plate of the dest, (src, dest)
             3 : source and destination are the same, (src, src)
-            4 : pop an empty tower, ()
+            4 : tried to pop an empty tower, ()
             5 : invalid value, ()
         """
         mapping = {1 : self._tower1, 2 : self._tower2, 3 : self._tower3}
@@ -35,7 +35,7 @@ class Hanoi:
             return 4, ()  
         if src == dest:  # source and destination are the same
             return 3, (src, src)  
-        if not mapping[dest].isEmpty() and mapping[src].summit() > mapping[dest].summit():  # TOCHECK TODO
+        if not mapping[dest].isEmpty() and mapping[src].summit() > mapping[dest].summit():
             # if the destination is not empty and
             # if the top plate of the source is larger than the top plate of the destination
             return 2, (src, dest)
