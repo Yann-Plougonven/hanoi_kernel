@@ -20,12 +20,12 @@ class Hanoi:
         src : integer {1, 2, 3}
         dest : integer {1, 2, 3}
         Return a status :
-            0 : success of the movement, (src, dest)
-            1 : game over, (src, dest)
-            2 : the top plate of the src is larger than the top plate of the dest, (src, dest)
-            3 : source and destination are the same, (src, src)
-            4 : tried to pop an empty tower, ()
-            5 : invalid value, ()
+        0 : success of the movement, (src, dest)
+        1 : game over, (src, dest)
+        2 : the top plate of the src is larger than the top plate of the dest, (src, dest)
+        3 : source and destination are the same, (src, src)
+        4 : tried to pop an empty tower, ()
+        5 : invalid value, ()
         """
         mapping = {1 : self._tower1, 2 : self._tower2, 3 : self._tower3}
         

@@ -8,5 +8,5 @@ setup(
     author_email='plougonven-y@saint-louis29.net',
     description="Hanoi tower game's kernel",
     packages=find_packages(),    
-    install_requires=['Stack'],
+    install_requires=['Stack', 'Sphinx'],
 )
