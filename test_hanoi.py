@@ -34,32 +34,23 @@ class HanoiTests(unittest.TestCase):
         expected_move = 1,3
         self.assertEqual(move, expected_move, f"Move should be {expected_move}, but is {move}")
             
-        
-# TODO
-#     def testHanoiStatus3(self):
-#         """source and destination are the same"""
-#         status, move = self.hanoi.move(1,3)
-#         expected_status = 0
-#         self.assertEqual(status, expected_status, f"Status should be {expected_status}, but is {status}")
-#         expected_move = 1,3
-#         self.assertEqual(move, expected_move, f"Move should be {expected_move}, but is {move}")
-# 
-#     def testHanoiStatus4(self):
-#         """tried to pop an empty tower"""
-#         status, move = self.hanoi.move(1,3)
-#         expected_status = 0
-#         self.assertEqual(status, expected_status, f"Status should be {expected_status}, but is {status}")
-#         expected_move = 1,3
-#         self.assertEqual(move, expected_move, f"Move should be {expected_move}, but is {move}")
-#         
-#     def testHanoiStatus5(self):
-#         """invalid value"""
-#         status, move = self.hanoi.move(1,3)
-#         expected_status = 0
-#         self.assertEqual(status, expected_status, f"Status should be {expected_status}, but is {status}")
-#         expected_move = 1,3
-#         self.assertEqual(move, expected_move, f"Move should be {expected_move}, but is {move}")
+    def testHanoiStatus3(self):
+        """source and destination are the same"""
+        status, move = self.hanoi.move(1,1)
+        expected_status = 3
+        self.assertEqual(status, expected_status, f"Status should be {expected_status}, but is {status}")
 
+    def testHanoiStatus4(self): # TODO
+        """tried to pop an empty tower"""
+        status, move = self.hanoi.move(2,3)
+        expected_status = 4
+        self.assertEqual(status, expected_status, f"Status should be {expected_status}, but is {status}")
+        
+    def testHanoiStatus5(self): # TODO
+        """invalid value"""
+        status, move = self.hanoi.move(4,3)
+        expected_status = 5
+        self.assertEqual(status, expected_status, f"Status should be {expected_status}, but is {status}")
 
 def testHanoiSolve(self):
         _object = Hanoi(0)
