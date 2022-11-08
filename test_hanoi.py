@@ -33,7 +33,7 @@ class HanoiTests(unittest.TestCase):
         self.assertEqual(status, expected_status, f"Status should be {expected_status}, but is {status}")
         expected_move = 1,3
         self.assertEqual(move, expected_move, f"Move should be {expected_move}, but is {move}")
-        
+            
         
 # TODO
 #     def testHanoiStatus3(self):
@@ -59,7 +59,17 @@ class HanoiTests(unittest.TestCase):
 #         self.assertEqual(status, expected_status, f"Status should be {expected_status}, but is {status}")
 #         expected_move = 1,3
 #         self.assertEqual(move, expected_move, f"Move should be {expected_move}, but is {move}")
-        
+
+
+def testHanoiSolve(self):
+        _object = Hanoi(0)
+        tour = _object.solve_hanoi(4)
+        print(f"len = {len(tour.get_history())}")
+        expected_result = ((), (), (4, 3, 2, 1))
+        self.assertEqual(tour.show(), expected_result, f"Result should be {expected_result}, but is {tour.show()}")
+        expected_number_of_moves = 15
+        self.assertEqual(len(tour.get_history()), expected_number_of_moves, f"Number of moves should be {expected_number_of_moves}, but is {len(tour.get_history())}")
+
         
 if __name__ == '__main__':
     unittest.main()

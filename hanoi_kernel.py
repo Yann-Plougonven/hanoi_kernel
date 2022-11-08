@@ -86,9 +86,9 @@ class Hanoi:
         _recursive_solve(n, 1, 2, 3)
         return h
 
-# FOR TESTING solve_hanoi(n)
-# _object = Hanoi(0)
-# tour = _object.solve_hanoi(3)
-# print(f"history : {tour.get_history()}")
-# print(f"len = {len(tour.get_history())}")
-# print(tour.show())
+#FOR TESTING solve_hanoi(n)
+_object = Hanoi(0)
+tour = _object.solve_hanoi(4)
+print(f"history : {tour.get_history()}")
+print(f"len = {len(tour.get_history())}")
+print(tour.show())
