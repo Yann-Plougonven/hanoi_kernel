@@ -59,6 +59,7 @@ class Hanoi:
         """
         return (self._tower1.show(), self._tower2.show(), self._tower3.show())
     
+    
     def _create(self):
         """
         Create each plate and push them in _tower1
@@ -66,12 +67,14 @@ class Hanoi:
         # TODO : check that n is in [3:10] ??
         for i in range(self._size, 0, -1):
             self._tower1.push(i)
-            
+           
+           
     def get_history(self):
         """
-        a function that return all the move that happend in the game in a list
+        a function that return all the move that happened in the game in a list
         """
         return self._history
+            
             
     def solve_hanoi(self, n):
         h = Hanoi(n)
@@ -85,10 +88,3 @@ class Hanoi:
         # Call of the recursive function
         _recursive_solve(n, 1, 2, 3)
         return h
-
-#FOR TESTING solve_hanoi(n)
-_object = Hanoi(0)
-tour = _object.solve_hanoi(4)
-print(f"history : {tour.get_history()}")
-print(f"len = {len(tour.get_history())}")
-print(tour.show())
