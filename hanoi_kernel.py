@@ -61,6 +61,6 @@ class Hanoi:
         """
         Create each plate and push them in _tower1
         """
-        # TODO : check that n is in [3:10]
+        # TODO : check that n is in [3:10] ??
         for i in range(self._size, 0, -1):
             self._tower1.push(i)
