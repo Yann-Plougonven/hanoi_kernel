@@ -45,8 +45,10 @@ class Hanoi:
             # Then move the plate from src to dest
             mapping[dest].push(mapping[src].pop())
             if mapping[3].size() == self._size:  # Game over
+                self._history.append((src, dest))
                 return 1, (src, dest)  
             else:  # Success of this movement
+                self._history.append((src, dest))
                 return 0, (src, dest)  
     
     
@@ -64,3 +66,29 @@ class Hanoi:
         # TODO : check that n is in [3:10] ??
         for i in range(self._size, 0, -1):
             self._tower1.push(i)
+            
+    def get_history(self):
+        """
+        a function that return all the move that happend in the game in a list
+        """
+        return self._history
+            
+    def solve_hanoi(self, n):
+        h = Hanoi(n)
+        
+        def _recursive_solve(n, source, auxiliary, destination):
+            if n >= 1:  # Stopping case
+                _recursive_solve(n-1, source, destination, auxiliary)
+                h.move(source, destination)
+                _recursive_solve(n-1, auxiliary, source, destination)
+            
+        # Call of the recursive function
+        _recursive_solve(n, 1, 2, 3)
+        return h
+
+# FOR TESTING solve_hanoi(n)
+# _object = Hanoi(0)
+# tour = _object.solve_hanoi(3)
+# print(f"history : {tour.get_history()}")
+# print(f"len = {len(tour.get_history())}")
+# print(tour.show())
